@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Writing</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="nav-placeholder"></div>
+
+    <h1 class="title">Writing</h1>
+
+    <div class="writingContainer">
+
+        <a class="articleCard" href="https://medium.com/@stefhuber/how-to-make-work-feel-better-5-simple-shifts-that-change-the-way-you-work-f4966997c7c2">
+            <h3>How to Make Work Feel Better: 5 Simple Shifts That Change the Way You Work</h3>
+            <p class="subhead">Discover small but powerful adjustments to bring more flow, clarity, and ease into your daily routines</p>
+            <p class="date">16 Apr 2025</p>
+        </a>
+
+        <hr class="writing-line" />
+
+        <a class="articleCard" href="https://medium.com/@stefhuber/how-to-make-work-feel-better-5-simple-shifts-that-change-the-way-you-work-f4966997c7c2">
+            <h3>The Person You Have Called Is Temporarily Unavailable</h3>
+            <p class="subhead">7 Dimensions of Unavailability for More Peace, Clarity, and Sanity at Work — With Callouts For Authentic Leaders</p>
+            <p class="date">16 Apr 2025</p>
+        </a>
+
+        <hr class="writing-line" />
+
+        <a class="articleCard" href="https://medium.com/@stefhuber/how-to-make-work-feel-better-5-simple-shifts-that-change-the-way-you-work-f4966997c7c2">
+            <h3>How to Hear Your Inner Voice in a World That Won’t Shut Up</h3>
+            <p class="subhead">Who Are You — When No One Is Watching?</p>
+            <p class="date">16 Apr 2025</p>
+        </a>
+
+        <hr class="writing-line" />
+
+        <a class="articleCard" href="https://medium.com/@stefhuber/how-to-make-work-feel-better-5-simple-shifts-that-change-the-way-you-work-f4966997c7c2">
+            <h3>Manifestation Without the Fairy Dust</h3>
+            <p class="subhead">It’s YOU, not the universe: the psychology behind why visions, goals and future selves actually work</p>
+            <p class="date">16 Apr 2025</p>
+        </a>
+
+      </div>
+      
+
+<div id="footer-placeholder"></div>
+</body>
+
+<script>
+    // Inject footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  
+    // Inject nav
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+  
+        // Re-bind event listeners AFTER nav is injected
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const closeBtn = document.getElementById('closeBtn');
+  
+        hamburger?.addEventListener('click', () => {
+          navMenu?.classList.add('show');
+        });
+  
+        closeBtn?.addEventListener('click', () => {
+          navMenu?.classList.remove('show');
+        });
+      });
+  </script>
+  </html>

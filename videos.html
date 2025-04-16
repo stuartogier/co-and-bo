@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Videos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="nav-placeholder"></div>
+
+    <h1 class="title">Videos</h1>
+
+    <div class="videoContainer">
+
+        <div class="videoCard" data-video-id="WeJKSP_rz0o">
+            <img
+              loading="lazy"
+              src="https://img.youtube.com/vi/WeJKSP_rz0o/hqdefault.jpg"
+              class="videoImage"
+              alt="YouTube video thumbnail"
+            />  
+            <h4>When F1 Ran At Le Mans (And Was VERY Fast)</h4>
+            <p class="date">16 Apr 2025</p>
+          </div>
+                    
+          <div class="videoCard" data-video-id="IPxNUTvawVE">
+            <img
+              loading="lazy"
+              src="https://img.youtube.com/vi/IPxNUTvawVE/hqdefault.jpg"
+              class="videoImage"
+              alt="YouTube video thumbnail"
+            />  
+            <h4>Pidcock's Infamous Descent Seen From my Chest Cam</h4>
+            <p class="date">10 Apr 2025</p>
+          </div>
+
+          <div class="videoCard" data-video-id="k3LUFw35zmI">
+            <img
+              loading="lazy"
+              src="https://img.youtube.com/vi/k3LUFw35zmI/hqdefault.jpg"
+              class="videoImage"
+              alt="YouTube video thumbnail"
+            />  
+            <h4>Watching Football in the Lowest Division in England</h4>
+            <p class="date">3 Apr 2025</p>
+          </div>
+          
+          <div class="videoCard" data-video-id="3GtzaV3Tkk0">
+            <img
+              loading="lazy"
+              src="https://img.youtube.com/vi/3GtzaV3Tkk0/hqdefault.jpg"
+              class="videoImage"
+              alt="YouTube video thumbnail"
+            />  
+            <h4>Golden Teardrops</h4>
+            <p class="date">1 Apr 2025</p>
+          </div>
+
+        </div>
+
+
+      <div id="videoModal" class="modal">
+        <div class="modal-content">
+          <span id="closeModal" class="close">&times;</span>
+          <div class="videoWrapper">
+            <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      
+
+      
+
+<div id="footer-placeholder"></div>
+</body>
+
+<script>
+    // Inject footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  
+    // Inject nav
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+  
+        // Re-bind event listeners AFTER nav is injected
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const closeBtn = document.getElementById('closeBtn');
+  
+        hamburger?.addEventListener('click', () => {
+          navMenu?.classList.add('show');
+        });
+  
+        closeBtn?.addEventListener('click', () => {
+          navMenu?.classList.remove('show');
+        });
+      });
+
+      document.querySelectorAll('.videoCard').forEach(card => {
+    card.addEventListener('click', function () {
+      const videoId = this.getAttribute('data-video-id');
+      const iframe = document.getElementById('videoFrame');
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      document.getElementById('videoModal').style.display = 'block';
+    });
+  });
+
+  document.getElementById('closeModal').addEventListener('click', function () {
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('videoFrame');
+    modal.style.display = 'none';
+    iframe.src = '';
+  });
+  </script>
+  </html>

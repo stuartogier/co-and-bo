@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Co&Bo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="nav-placeholder"></div>
+
+
+  <img
+    loading="lazy"
+    src="/public/hero.jpg"
+    class="hero"
+    alt="Hero image"
+  />
+
+  <div class="homeContainer">
+    <a href="/videos" class="homeContainer2">
+
+    <div class="homeImageContainer">
+      <img
+        loading="lazy"
+        src="/public/a.jpg"
+        class="homeImage"
+        alt="Hero image"
+      />    
+    </div>
+      <h2>Videos</h2>  
+</a>
+
+<a href="/writing" class="homeContainer2">
+    <div class="homeImageContainer">
+      <img
+        loading="lazy"
+        src="/public/b.jpg"
+        class="homeImage"
+        alt="Hero image"
+      />    
+    </div>
+    <h2>Writing</h2>  
+  </a>
+  </div>
+  
+
+
+<div id="footer-placeholder"></div>
+</body>
+
+<script>
+    // Inject footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  
+    // Inject nav
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+  
+        // Re-bind event listeners AFTER nav is injected
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const closeBtn = document.getElementById('closeBtn');
+  
+        hamburger?.addEventListener('click', () => {
+          navMenu?.classList.add('show');
+        });
+  
+        closeBtn?.addEventListener('click', () => {
+          navMenu?.classList.remove('show');
+        });
+      });
+  </script>
+  </html>

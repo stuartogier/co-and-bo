@@ -27,7 +27,6 @@
         <div class="svg-stack">
         
           <div class="svg-stack rotating-svgs">
-            <img src="/public/one.svg" class="svg-item rotating" />
             <img src="/public/two.svg" class="svg-item rotating" />
             <img src="/public/three.svg" class="svg-item rotating" />
             <img src="/public/four.svg" class="svg-item rotating" />
@@ -129,7 +128,7 @@
 
     // Set initial visibility
     rotatingSvgs.forEach((img, index) => {
-      img.style.opacity = (index === 0) ? '1' : '0';
+      img.style.opacity = (index === 0) ? '2' : '0';
     });
 
     function showNextSvg() {
@@ -140,7 +139,7 @@
       // Add a slight delay for the fade-out to finish before fade-in
       setTimeout(() => {
         rotatingSvgs[currentIndex].style.opacity = '1';
-      }, 300);
+      }, 1000);
     }
 
     setInterval(showNextSvg, 4000);

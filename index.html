@@ -25,12 +25,20 @@
         </video>
       
         <div class="svg-stack">
-          <img src="/public/one.svg" class="svg-item" />
-          <img src="/public/two.svg" class="svg-item" />
-          <img src="/public/three.svg" class="svg-item" />
-          <img src="/public/four.svg" class="svg-item" />
+        
+          <div class="svg-stack rotating-svgs">
+            <img src="/public/one.svg" class="svg-item rotating" />
+            <img src="/public/two.svg" class="svg-item rotating" />
+            <img src="/public/three.svg" class="svg-item rotating" />
+            <img src="/public/four.svg" class="svg-item rotating" />
+            <img src="/public/five.svg" class="svg-item rotating" />
+            <img src="/public/six.svg" class="svg-item rotating" />
+          </div>
         </div>
+
       </div>
+ 
+        
       
       <div class="writinghomeContainer">
         <h2 class="abouth2">Welcome to Co&Bo</h2>
@@ -112,5 +120,30 @@
           navMenu?.classList.remove('show');
         });
       });
-  </script>
+
+      document.addEventListener('DOMContentLoaded', () => {
+    const rotatingSvgs = document.querySelectorAll('.rotating-svgs .rotating');
+    let currentIndex = 0;
+
+    if (rotatingSvgs.length === 0) return;
+
+    // Set initial visibility
+    rotatingSvgs.forEach((img, index) => {
+      img.style.opacity = (index === 0) ? '1' : '0';
+    });
+
+    function showNextSvg() {
+      rotatingSvgs[currentIndex].style.opacity = '0';
+
+      currentIndex = (currentIndex + 1) % rotatingSvgs.length;
+
+      // Add a slight delay for the fade-out to finish before fade-in
+      setTimeout(() => {
+        rotatingSvgs[currentIndex].style.opacity = '1';
+      }, 300);
+    }
+
+    setInterval(showNextSvg, 4000);
+  });
+        </script>
   </html>

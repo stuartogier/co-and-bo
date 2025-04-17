@@ -11,13 +11,28 @@
     <div id="nav-placeholder"></div>
 
 
-  <img
-    loading="lazy"
-    src="/public/hero.jpg"
+    <video
     class="hero"
-    alt="Hero image"
-  />
-
+    autoplay
+    muted
+    playsinline
+    loop
+    preload="auto"
+  >
+    <source src="/public/hero.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  
+      
+        <div class="svg-stack">
+          <img src="/public/one.svg" class="svg-item" />
+          <img src="/public/two.svg" class="svg-item" />
+          <img src="/public/three.svg" class="svg-item" />
+          <img src="/public/four.svg" class="svg-item" />
+        </div>
+      </div>
+      
+      
   <div class="homeContainer">
     <a href="/videos" class="homeContainer2">
 
@@ -36,7 +51,7 @@
     <div class="homeImageContainer">
       <img
         loading="lazy"
-        src="/public/b.jpg"
+        src="/public/b.JPG"
         class="homeImage"
         alt="Hero image"
       />    

@@ -9,6 +9,11 @@
     font-family: 'Work Sans', sans-serif;
     align-items: center;
   }
+
+  p {
+    line-height: 1.5;  
+    font-weight: 400;
+    }
   
   /* Typography */
   h1 {
@@ -31,7 +36,7 @@
     font-size: 18px;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1099px) {
     h1 {
         font-size: 48px;
       }
@@ -79,7 +84,7 @@
     margin-bottom: 50px;
   }
   
-  @media (max-width: 992px) {
+  @media (max-width: 1099px) {
     .hero {
       height: 400px;
     }
@@ -87,7 +92,7 @@
   
   @media (max-width: 640px) {
     .hero {
-      height: 350px;
+      height: 300px;
       margin-bottom: 30px;
     }
   }
@@ -101,7 +106,7 @@
     margin: 50px 100px;
   }
   
-  @media (max-width: 992px) {
+  @media (max-width: 1099px) {
     .navContainer {
       margin: 50px 50px;
     }
@@ -177,9 +182,10 @@
     gap: 50px;
     padding: 0 100px;
     margin: 0 auto;
+    margin-top: 50px;
   }
   
-  @media (max-width: 992px) {
+  @media (max-width: 1099px) {
     .homeContainer {
       gap: 25px;
       padding: 0 50px;
@@ -221,7 +227,7 @@
   
   .homeImage {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 1.5;
     object-fit: cover;
   }
 
@@ -255,7 +261,7 @@
     padding-bottom: 50px;
   }
   
-  @media (max-width: 992px) {
+  @media (max-width: 1099px) {
     .footer-content {
       margin: 0 50px;
     }
@@ -271,7 +277,6 @@
   .social {
     height: 24px;
     width: 24px;
-    margin-left: 15px;
   }
 
   .title {
@@ -279,7 +284,7 @@
     margin: 50px 100px;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1099px) {
     .title {
         margin: 50px 50px;
       }
@@ -294,13 +299,13 @@
   .videoContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 👈 Three columns */
-    gap: 25px;
+    gap: 50px;
     max-width: 1400px;
     margin: 0 auto;
     padding: 50px 100px;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1099px) {
   .videoContainer {
     grid-template-columns: repeat(2, 1fr); /* 👈 Three columns */
     gap: 25px;
@@ -335,7 +340,7 @@
 
   .videoImage {
     width: 100%;
-    aspect-ratio: 1.777;
+    aspect-ratio: 1.8;
     border-radius: 10px;
     margin-bottom: 5px;
     object-fit: cover;
@@ -348,7 +353,7 @@
     padding: 50px 100px;
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1099px) {
   .writingContainer {
     width: 100%;
     padding: 50px 50px;
@@ -402,7 +407,7 @@
     margin: auto;
     background-color: transparent;
     width: 90%;
-    max-width: 1000px;
+    max-width: 1099px;
     padding-top: 20px;
   }
   
@@ -429,5 +434,86 @@
     width: 100%;
     height: 100%;
   }
+
+  .hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Or whatever you need */
+    overflow: hidden;
+  }
+    
+  .svg-stack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .svg-item {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+    height: 75px;
+  }
+
+  @media (max-width: 1099px) {
+  .svg-item {
+    height: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+    .svg-item {
+      height: 40px;
+    }
+  }
+  
+  .svg-item:nth-child(1) { animation-delay: 0s; }
+  .svg-item:nth-child(2) { animation-delay: 1s; }
+  .svg-item:nth-child(3) { animation-delay: 2s; }
+  .svg-item:nth-child(4) { animation-delay: 3s; }
+  
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  
+  .email {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .email:hover {
+    text-decoration: underline;
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    height: 100%;
+    gap: 25px;
+}
+
+.aboutImage {
+    width: 100%;
+    aspect-ratio: 1.5;
+    object-fit: cover;
+}
+
+.abouth2 {
+    padding-top: 50px;
+}
+
+@media (max-width: 1099px) {
+.abouth2 {
+    padding-top: 30px;
+}
+}
+
+.aboutp {
+    padding-top: 15px;
+}
   
   

@@ -167,6 +167,7 @@
     font-size: 40px;
     cursor: pointer;
     display: block;
+    color: aquamarine
   }
   
   @media (max-width: 640px) {

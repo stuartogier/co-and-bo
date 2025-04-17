@@ -20,7 +20,7 @@
   }
   
   h2 {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 500;
   }
 
@@ -39,7 +39,7 @@
         font-size: 48px;
       }
       h2 {
-        font-size: 20px;
+        font-size: 28px;
       }
       h3 {
         font-size: 18px;
@@ -54,7 +54,7 @@
             font-size: 40px;
           }
           h2 {
-            font-size: 20px;
+            font-size: 24px;
           }
           h3 {
             font-size: 16px;
@@ -577,6 +577,7 @@ nav a:hover {
 
 .abouth2 {
     padding-top: 50px;
+    padding-bottom: 15px;
     width: 66%;
 }
 

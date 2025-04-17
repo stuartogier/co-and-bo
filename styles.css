@@ -99,22 +99,23 @@
   
   /* Navigation Container */
   .navContainer {
-    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 50px 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 100px;
   }
   
   @media (max-width: 1099px) {
     .navContainer {
-      margin: 50px 50px;
+        padding: 50px 50px;
     }
   }
   
   @media (max-width: 640px) {
     .navContainer {
-      margin: 25px 25px;
+        padding: 25px 25px;
     }
   }
   
@@ -251,8 +252,9 @@
   }
   
   .footer-content {
-    max-width: 1200px;
-    margin: 0 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -262,7 +264,7 @@
   
   @media (max-width: 1099px) {
     .footer-content {
-      margin: 0 50px;
+        padding: 0 50px;
     }
   }
   
@@ -270,6 +272,7 @@
     .footer-content {
       flex-direction: column;
       gap: 25px;
+        margin-bottom: 50px;
     }
   }
   
@@ -279,19 +282,20 @@
   }
 
   .title {
-    max-width: 1200px;
-    margin: 50px 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 100px;
   }
 
   @media (max-width: 1099px) {
     .title {
-        margin: 50px 50px;
+        padding: 50px 50px;
       }
     }
 
     @media (max-width: 640px) {
         .title {
-            margin: 25px 25px;
+            padding: 25px 25px;
           }
         }
   
@@ -348,8 +352,9 @@
 
   .writingContainer {
     max-width: 1400px;
-    width: 66%;
     padding: 50px 100px;
+    margin: 0 auto;
+    align-items: baseline;
   }
 
   @media (max-width: 1099px) {
@@ -434,22 +439,68 @@
     height: 100%;
   }
 
-  .hero-container {
+  .video-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Or whatever you need */
+    max-width: 100%; /* or a set width if you want to constrain it more */
     overflow: hidden;
   }
+
+    /* Hero Image */
+    .hero {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 50px;
+      }
+      
+      @media (max-width: 1099px) {
+        .hero {
+          height: 400px;
+        }
+      }
+      
+      @media (max-width: 640px) {
+        .hero {
+          height: 300px;
+          margin-bottom: 30px;
+        }
+      }
     
-  .svg-stack {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+      .svg-stack {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        justify-content: center; /* Vertically center them */
+        padding-left: 100px; /* optional: space from the edge */
+        padding-bottom: 80px;
+        gap: 10px;
+      }
+
+      @media (max-width: 1099px) {
+        .svg-stack {
+            padding-left: 50px; 
+            padding-bottom: 50px;
+
+        }
+    }
+    @media (max-width: 640px) {
+        .svg-stack {
+            padding-left: 25px; 
+            padding-bottom: 25px;
+
+        }
+    }
+
+
+
+      
   
   .svg-item {
     opacity: 0;
@@ -496,23 +547,45 @@
 }
 
 .aboutImage {
-    width: 100%;
     aspect-ratio: 1.5;
     object-fit: cover;
+    width: 66%;
+
+}
+
+@media (max-width: 1099px) {
+    .aboutImage {
+
+        width: 100%;
+    
+    }
 }
 
 .abouth2 {
     padding-top: 50px;
+    width: 66%;
+
 }
 
 @media (max-width: 1099px) {
 .abouth2 {
     padding-top: 30px;
+    width: 100%;
+
 }
 }
 
 .aboutp {
     padding-top: 15px;
+    width: 66%;
+
 }
+
+@media (max-width: 1099px) {
+    .aboutp {
+        width: 100%;
+    
+    }
+    }
   
   

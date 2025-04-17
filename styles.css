@@ -238,13 +238,13 @@ nav a:hover {
   .homeImageContainer {
     width: 100%;
     overflow: hidden;
-    aspect-ratio: 1.5;
+    aspect-ratio: 1;
     margin-bottom: 15px;
   }
   
   .homeImage {
     width: 100%;
-    aspect-ratio: 1.5;
+    aspect-ratio: 1;
     object-fit: cover;
   }
 

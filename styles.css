@@ -385,6 +385,29 @@ nav a:hover {
     }
   }
 
+  .writinghomeContainer {
+    max-width: 1400px;
+    padding: 0 100px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    align-items: baseline;
+  }
+
+  @media (max-width: 1099px) {
+  .writinghomeContainer {
+    padding: 0 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 640px) {
+    .writinghomeContainer {
+        padding: 0 25px;
+        padding-bottom: 25px;
+
+    }
+  }
+
   .articleCard {
     width: 100%;
     text-decoration: none;

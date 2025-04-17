@@ -448,7 +448,7 @@
 
     /* Hero Image */
     .hero {
-        height: 500px;
+        height: 550px;
         width: 100%;
         object-fit: cover;
         margin-bottom: 50px;
@@ -478,7 +478,7 @@
         flex-direction: column;
         align-items: flex-start; /* Align items to the left */
         justify-content: center; /* Vertically center them */
-        padding-left: 100px; /* optional: space from the edge */
+        padding-left: clamp(100px, calc(50vw - 600px), 600px);
         padding-bottom: 80px;
         gap: 10px;
       }

@@ -21,7 +21,7 @@
   
   h2 {
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   h3 {
@@ -62,18 +62,18 @@
         }
 
   .logoImage {
-    height: 40px;
+    height: 35px;
   }
 
   @media (max-width: 1099px) {
     .logoImage {
-      height: 35px;
+      height: 30px;
     }
   }
   
   @media (max-width: 640px) {
     .logoImage {
-      height: 30px;
+      height: 25px;
     }
   }
   

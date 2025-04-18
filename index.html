@@ -27,6 +27,7 @@
         <div class="svg-stack">
         
           <div class="svg-stack rotating-svgs">
+            <img src="/public/one.svg" class="svg-item rotating" />
             <img src="/public/two.svg" class="svg-item rotating" />
             <img src="/public/three.svg" class="svg-item rotating" />
             <img src="/public/four.svg" class="svg-item rotating" />
@@ -40,8 +41,8 @@
         
       
       <div class="writinghomeContainer">
-        <h2 class="abouth2">Welcome to Co&Bo</h2>
-        <p class="aboutp">Co&Bo is a quiet corner of the internet, created to share what I’ve learned, and am still learning, as a counselling student. This space reflects my journey through the world of addiction and suicide with the moments of growth in between.</p>
+        <h2 class="abouth2">Welcome to CoBo</h2>
+        <p class="aboutp">CoBo is a quiet corner of the internet, created to share what I’ve learned, and am still learning, as a counselling student. This space reflects my journey through the world of addiction and suicide with the moments of growth in between.</p>
         <p class="aboutp">Here, you’ll find honest reflections, small insights, and thoughtful resources. Whether you’re navigating your own healing, supporting someone else, or simply curious.</p>
         <p class="aboutp"> I hope something here resonates with you.</p>
 
@@ -128,7 +129,7 @@
 
     // Set initial visibility
     rotatingSvgs.forEach((img, index) => {
-      img.style.opacity = (index === 0) ? '2' : '0';
+      img.style.opacity = (index === 0) ? '1' : '0';
     });
 
     function showNextSvg() {

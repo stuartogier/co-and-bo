@@ -118,7 +118,7 @@
   nav {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 25px;
     background: transparent;
     position: static;
   }

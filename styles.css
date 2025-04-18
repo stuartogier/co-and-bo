@@ -146,7 +146,7 @@ nav a:hover {
       top: 0;
       left: 0;
       flex-direction: column;
-      background: rgba(0, 0, 0, 0.8);
+      background: #262626;
       width: 100%;
       height: 100%;
       padding: 10px 25px;
@@ -169,15 +169,15 @@ nav a:hover {
   
     .hamburger {
       display: block;
-      font-size: 30px;
+      font-size: 35px;
       cursor: pointer;
     }
   
     .closeBtn {
       display: block;
       position: absolute;
-      top: 25px;
-      right: 25px;
+      top: 15px;
+      right: 30px;
       font-size: 40px;
       color: white;
       cursor: pointer;
@@ -250,6 +250,11 @@ nav a:hover {
     border: none;
     border-top: 0.5px solid #c4c4c4;
     margin-bottom: 50px;
+  }
+
+  .nav-line {
+    border: none;
+    border-top: 0.5px solid #c4c4c4;
   }
 
   .writing-line {

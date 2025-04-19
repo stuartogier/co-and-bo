@@ -12,7 +12,7 @@
     font-family: 'Fraunces', serif;
   }
   
-  p, a {
+  p, a, li {
     font-family: 'Work Sans', sans-serif;
   }
 
@@ -24,6 +24,12 @@
   p {
     line-height: 1.5;  
     font-weight: 400;
+    }
+
+    li {
+      line-height: 1.5;  
+      font-weight: 400;
+      margin-left: 20px;
     }
   
   h1 {
@@ -45,6 +51,14 @@
     font-weight: 500;
     font-size: 18px;
   }
+
+  h5 {
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 4px;
+  }
+
+
 
   @media (max-width: 1099px) {
 
@@ -380,6 +394,16 @@ nav a:hover {
 @media (max-width: 640px) {
     .writingContainer {
         padding: 25px 25px;
+    }
+  }
+
+  .writingSubContainer {
+    width: 66%;
+  }
+
+  @media (max-width: 1099px) {
+    .writingSubContainer {
+      width: 100%;
     }
   }
 

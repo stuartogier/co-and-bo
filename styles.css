@@ -218,7 +218,7 @@ nav a:hover {
   @media (max-width: 640px) {
     .homeContainer {
       flex-direction: column;
-      gap: 15px;
+      gap: 25px;
       padding: 0 25px;
     }
   }
@@ -262,24 +262,25 @@ nav a:hover {
   
   .footer-line {
     border: none;
-    border-top: 0.5px solid #c4c4c4;
+    border-top: 1px solid #c4c4c4;
     margin-bottom: 50px;
   }
 
   .nav-line {
     border: none;
-    border-top: 0.5px solid #c4c4c4;
+    border-top: 1px solid #c4c4c4;
   }
 
   .writing-line {
-    color: #d6d6d6;
+    border: none;
+    border-top: 1px solid #c4c4c4;
     margin: 25px 0;
   }
   
   .footer-content {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 50px 100px;
+    padding: 50px 100px 100px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -288,7 +289,7 @@ nav a:hover {
   
   @media (max-width: 1099px) {
     .footer-content {
-        padding: 50px 50px;
+      padding: 50px 50px 100px 50px;
     }
   }
   
@@ -308,7 +309,7 @@ nav a:hover {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 100px;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
 
   }
 
@@ -629,7 +630,7 @@ nav a:hover {
 }
 
 .aboutp {
-    padding-top: 15px;
+    padding-bottom: 15px;
     width: 66%;
 }
 

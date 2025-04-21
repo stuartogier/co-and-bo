@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More Ideas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Fraunces:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="nav-placeholder"></div>
+    
+    <hr class="footer-line" />
+
+    <h1 class="title">More ideas</h1>
+
+    <div class="writingContainer">
+        <div class="writingSubContainer">
+
+
+          <h3>1. It’s not about happiness</h3>
+          <br>
+          <p>When I was early on in trying to get myself back on track, someone asked me, "How are you doing?"</p>
+          <br>
+          <p>And I said, "I'm okay. I'm not happy yet, though."</p>
+          <br>
+          <p>To which they replied, "You're not supposed to be happy. You're supposed to be content."</p>
+          <br>
+          <p>At the time, I had no idea what they meant. Not a clue. I assumed if I put in all the work, meditation, therapy, helping others, I’d end up happy. Isn’t that the point?</p>
+          <br>
+          <p>But what they were pointing out to me is that’s not really how life works. Happiness is amazing when it comes, but it's fleeting. None of us are happy all the time. And that’s okay.</p>
+          <br>
+          <p>Think about it: would we expect to feel happy at the funeral of a loved one? Of course not, we’re meant to feel sadness then. Would we be happy after being sacked from a job? Probably not, we’d feel angry, upset, disappointed. And that’s valid.</p>
+          <br>
+          <p>On the other hand, we’d expect happiness at a birthday party or surrounded by loved ones. It’s natural. But chasing happiness all the time can sometimes make us miss the joy in the moments we already have. It might leave us thinking, “This isn’t good enough.”</p>
+          <br>
+          <p>So now, I tell myself: just aim to be content. Look for something in today, even in hard times, and say, “That’s okay. I can manage this.” Even if the best you can do is just get through, that’s enough for today.</p>
+          <br>
+          <br>
+
+          <h3>2. You can’t get off the rollercoaster, but you can choose which one you want to get on</h3>
+          <br>
+          <p>Where I live in the south of England, there are several theme parks. One of them is Thorpe Park, which has some of the biggest roller coasters in the country, huge ones that loop, twist, and climb to dizzying heights before plummeting back down.</p>
+          <br>
+          <p>Just around the corner, there’s Legoland. It has a few bigger rides, but mostly, it’s got the smaller, gentler roller coasters for little kids. These ones just go up and down in a simple, predictable rhythm.</p>
+          <br>
+          <p>And honestly, that’s kind of what life is like, a roller coaster. Most of us would love one that only goes up or stays flat. But life doesn’t work like that. Maybe somewhere there’s a monk who’s managed it, but for the rest of us, life has ups and downs.</p>
+          <br>
+          <p>The real question is, which roller coaster are we on? For many of us, it’s the big one with the dramatic highs and lows. And here’s the thing: those big rides can be addictive. They’re intense, overwhelming, but also familiar. They can feel impossible to step away from because we’ve gotten so used to the rush of it all, the highs, the lows, the chaos in between.</p>
+          <br>
+          <p>That’s often where medication comes in. But meds don’t take us off the roller coaster, they just put a fog over the top and bottom. We don’t see the extremes as clearly, but the ride is still happening. When we stop the meds, the fog lifts, and there we are, back on the big ride.</p>
+          <br>
+          <p>So the real work is figuring out how to step off that intense, overwhelming coaster and onto something calmer, gentler. Maybe something like the kiddie ride, predictable and steady.</p>
+          <br>
+          <p>How we do that is up to us. There are lots of ways, ways I talk about in other videos. But one thing we can’t do is get off the ride entirely. Life will always be a roller coaster.</p>
+          <br>
+          <p>We’re going to feel angry. We’re going to feel sad. But we’ll also feel joy, love, and happiness. The choice is in how we interpret it. Do we want to stay on the wild ups and downs, “Oh my God, it’s all terrible, it’s all brilliant”, or can we aim for something steadier?</p>
+          <br>
+          <p>Personally, I prefer the gentler ride.</p>
+          <br>
+          <br>
+          <h3>3. Progress isn’t always obvious</h3>
+<br>
+<p>When you're working on yourself—your mental health, your habits, healing old wounds, it can feel like nothing’s changing.</p>
+<br>
+<p>You’re doing the stuff: journaling, meditating, going to therapy, being more present, yrying your best.</p>
+<br>
+<p>And yet, you still have those days where you go, Why do I still feel like this? Shouldn’t I be further along by now?</p>
+<br>
+<p>But here’s the thing: progress isn’t obvious to us.</p>
+<br>
+<p>It’s like when you’re young, and an aunt you haven’t seen for ages says, "Haven’t you grown!" And you’re standing there thinking, What? I feel the same.</p>
+<br>
+<p>Because you see yourself every day. You don’t notice the inches. The shifts. But they’re happening.</p>
+<br>
+<p>It’s the same with emotional growth. Sometimes it’s just that moment where you don’t snap like you used to. Or you pause before reacting. Or you get through a rough patch without spiralling the way you might have done before.</p>
+<br>
+<p>It doesn’t feel dramatic. It might even feel underwhelming. But it’s real.</p>
+<br>
+<p>And often, it’s the people around us who notice first.</p>
+<br>
+<p>So if today you’re sitting there thinking, I haven’t changed, You probably have.</p>
+<br>
+<p>You’ve just been too close to see it.</p>
+
+
+                    
+    </div>
+  </div>
+
+
+<div id="footer-placeholder"></div>
+</body>
+
+<script>
+    // Inject footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  
+    // Inject nav
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+  
+        // Re-bind event psteners AFTER nav is injected
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const closeBtn = document.getElementById('closeBtn');
+  
+        hamburger?.addEventpstener('cpck', () => {
+          navMenu?.classpst.add('show');
+        });
+  
+        closeBtn?.addEventpstener('cpck', () => {
+          navMenu?.classpst.remove('show');
+        });
+      });
+  </script>
+  </html>

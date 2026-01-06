@@ -245,6 +245,7 @@ nav a:hover {
     overflow: hidden;
     aspect-ratio: 1;
     margin-bottom: 15px;
+    border-radius: 10px;
   }
   
   .homeImage {
